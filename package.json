@@ -30,18 +30,18 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "@saemhco/nestjs-html-pdf",
+  "name": "@luism27/nestjs-html-pdf",
   "module": "dist/nestjs-html-pdf.esm.js",
   "description": "A NestJS module to generate PDF files from HTML",
   "author": "Saúl Escandon <e.m.saul.angel@gmail.com> (https://github.com/saemhco)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saemhco/nestjs-html-pdf.git"
+    "url": "git+https://github.com/Luism27/nestjs-html-pdf.git"
   },
   "bugs": {
-    "url": "https://github.com/saemhco/nestjs-html-pdf/issues"
+    "url": "https://github.com/Luism27/nestjs-html-pdf/issues"
   },
-  "homepage": "https://github.com/saemhco/nestjs-html-pdf#readme",
+  "homepage": "https://github.com/Luism27/nestjs-html-pdf#readme",
   "size-limit": [
     {
       "path": "dist/nestjs-html-pdf.cjs.production.min.js",
