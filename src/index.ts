@@ -2,15 +2,15 @@ const puppeteer = require('puppeteer');
 const hbs = require('handlebars')
 const fs = require('fs-extra')
 
-export const createPdf = async (filePath: string, options = {}, data = {}) => {
+export const createPdf = async (filePath: string, options = {}, data = {}, puppeteerOptions = {}) => {
   try {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch(puppeteerOptions);
     const page = await browser.newPage();
-    
+
     hbs.registerHelper("ifCond", function (
-        v1: any, 
-        operator: any, 
-        v2: any, 
+        v1: any,
+        operator: any,
+        v2: any,
         options:any
       ) {
       switch (operator) {
@@ -53,7 +53,7 @@ export const createPdf = async (filePath: string, options = {}, data = {}) => {
           return Array.prototype.slice.call(arguments, 0, -1).some(Boolean);
       }
     });
-    
+
     const html = await fs.readFile(filePath, 'utf8');
     const content = hbs.compile(html)(data);
     await page.setContent(content);

@@ -18,7 +18,7 @@ import { createPdf } from '@saemhco/nestjs-html-pdf';
 import * as path from 'path';
 ```
 
-call the function create createPdf([filePath], [options], [data])
+call the function create createPdf([filePath], [options], [data], [puppeteerOptions])
 
 - `filePath` <[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type 'String')> It's required. HTML file path.
 - `options` <[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object 'Object')> It's optional.
@@ -41,6 +41,7 @@ For more values [see this link](https://github.com/saemhco/master/pdf-options.tx
 
 - `data` <[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object 'Object')> It's optional.
 
+- `puppeteerOptions` <[LaunchOptions](https://pptr.dev/api/puppeteer.launchoptions)> It's optional
 ### Quick use
 
 service file
